@@ -5,16 +5,15 @@ const {
     addCourse,
     updateCourse,
     deleteCourse
-    // getBootcampsInRadius
 } = require('../controllers/courses');
 
 const Course = require('../models/Course');
-const advancedResults = require('../middleware/advancedResults');
 
 const router = express.Router({ mergeParams: true });
 
 // Protect middleware
 const { protect, authorize } = require('../middleware/auth');
+const advancedResults = require('../middleware/advancedResults');
 
 router
     .route('/')

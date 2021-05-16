@@ -76,4 +76,5 @@ CourseSchema.post('save', function(){
 CourseSchema.pre('remove', function(){
     this.constructor.getAverageCost(this.bootcamp);
 });
+
 module.exports = mongoose.model('Course', CourseSchema);
